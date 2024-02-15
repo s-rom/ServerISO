@@ -1,0 +1,14 @@
+1) Obtén las lineas (independiente de mayúsculas/minúsculas) con la cadena: no 
+
+
+2) Obtén las lineas que no contengan la cadena: o
+# Pista: -v
+
+3) Obtén las lineas y el número de linea que contengan la cadena: it
+# Pista: -n
+
+4) Obtén la cantidad de lineas que contienen la cadena: a
+# Pista: -c
+
+5) Obtén las primeras dos lineas que contengan la cadena: do
+# Pista: -m
