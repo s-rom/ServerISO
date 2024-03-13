@@ -4,8 +4,8 @@ import os
 from colorama import Fore
 
 
-sol_pattern = re.compile("(?:[sS]olu[ct]ion):\s*(.*)")
-ex_pattern = re.compile("(\d)\)(.*)")
+sol_pattern = re.compile("(?:[sS]olu[ct]i[oó]n):\s*(.*)")
+ex_pattern = re.compile("(\d+)\)(.*)")
 
 def parse_and_solve(sol_file_path):
     solutions = []
@@ -46,9 +46,9 @@ def compare_solutions(sol_file_path, ex_file_path):
         student_sol = student_solutions[i]
         ref_sol = reference_solutions[i]
 
-        print("{}************{} EJERCICIO {} {} ************"
-            .format(Fore.BLUE, Fore.WHITE, student_sol["number"], Fore.BLUE))
-        print(Fore.WHITE + "[Enunciado]: {}".format(student_sol["statement"]))
+        print("{}************{} EJERCICIO {} {} ************{}"
+            .format(Fore.BLUE, Fore.WHITE, student_sol["number"], Fore.BLUE, Fore.WHITE))
+        #print(Fore.WHITE + "[Enunciado]: {}".format(student_sol["statement"]))
 
         
 
@@ -73,11 +73,13 @@ def compare_solutions(sol_file_path, ex_file_path):
 
 
 exercise = os.path.basename(os.getcwd())
-sol_file_path="/.secret/{}.txt".format(exercise)
-ex_file_path="./"+exercise+".txt"
+if exercise == 'EjerciciosTextoLinux':
+    sol_file_path="/.secret/Soluciones.txt"
+    ex_file_path="./Ejercicios.txt"
+else:
+    sol_file_path="/.secret/{}.txt".format(exercise)
+    ex_file_path="./"+exercise+".txt"
 
-print(sol_file_path)
-print(ex_file_path)
 
 compare_solutions(sol_file_path, ex_file_path)
      
