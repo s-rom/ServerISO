@@ -3,6 +3,7 @@ Nota: Usa las opciones: --exclude-dir, --include y --exclude
 Nota: También son necesarias las opciones -r y -l
 
 1) Obtén todas las lineas que contengan: you
+Solucion: grep -r 'are' 
 
 
 2) Muestra solo los nombres de los ficheros que tengan la cadena: Hello
@@ -16,11 +17,15 @@ Nota: También son necesarias las opciones -r y -l
 4) Muestra el nombre de los ficheros que tengan la cadena: are
     Excepto lo de los ficheros del directorio: progs
 
+Solucion: grep -rl --exclude-dir="progs" 'are' 
+
 
 5) Muestra solo el nombre de los ficheros que tengan la cadena: are
     excluye la búsqueda en los directorios
             dir1: progs
             dir2: msg
+
+Solucion: grep -rl --exclude-dir="progs" --exclude-dir="msg" 'are'
 
 6) Muestra solo el nombre de los ficheros que tengan la cadena: are
     usa únicamente los ficheros de los subdirectorios, no del directorio actual

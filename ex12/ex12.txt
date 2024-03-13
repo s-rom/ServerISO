@@ -1,47 +1,71 @@
-1) Match all lines containing any of these characters:
+
+# [Recordatorio]
+# -w sirve para especificar que se tienen que buscar únicamente palabras
+# -o sirve para mostrar únicamente la parte de la linea que coincide
+# -i sirve para indicar que dan igual las mayúsculas y minúsculas
+# En los ejercicios que pida extraer palabras hay que usar la combinación -wo
+
+
+1) Muestra las lineas que contienen alguno de estos carácteres:
         character1: q
         character2: x
         character3: z
 
 
-2) Match all lines containing any of these characters:
+2) Muestra las lineas que contienen alguno de estos carácteres:
         character1: c
         character2: f
-    followed by any character
-    followed by   : t
+    a continuación cualquier carácter
+    seguido del character  : t
+
+Solucion: egrep  '[cf].t' sample_words.txt
 
 
-3) Extract all words starting with character: s
-    ignore case
-    should contain only alphabets
-    minimum two letters
-    should be surrounded by word boundaries
+3) Muestra todas las palabras que empiecen por: s
+    sin importar mayúsculas
+    solo letras
+    mínimo 2 letras
+    palabras, no cadenas
 
+Solucion: egrep -iwo 's[a-z]+' sample_words.txt
 
-4) Extract all words made up of these characters:
+4) Extrae las palabras que son combinaciones de estos carácteres
         character1: a
         character2: c
         character3: e
         character4: r
         character5: s
-    ignore case
-    should contain only alphabets
-    should be surrounded by word boundaries
+    sin importar mayúsculas
+    solo letras
+    palabras, no cadenas
+
+Solucion: egrep -iwo '[acers]*' sample_words.txt
 
 
-5) Extract all numbers surrounded by word boundaries
+5) Extra todos los números que no son parte de una palabra
+
+Solucion: egrep -wo '[0-9]+' sample_words.txt
+
+6) Extra todos los números que no son parte de una palabra con la condición que:
+    30 <= número <= 70
 
 
-6) Extract all numbers surrounded by word boundaries matching the condition
-    30 <= number <= 70
+ 
 
 
-7) Extract all words made up of non-vowel characters
-    ignore case
-    should contain only alphabets and at least two
-    should be surrounded by word boundaries
+7) Extrae las palabras con solo consonantes
+    sin importar mayúsculas
+    solo letras
+    mínimo 2 caracteres
+    palabras, no cadenas
 
+Solucion: egrep -o '[a-z]' sample_words.txt
 
-8) Extract all sequence of strings consisting of character: -
-    surrounded on either side by zero or more case insensitive alphabets    
+8) Extrae todas las secuencias de cadenas que consisten en combinaciones de: -
+    rodeadas de 0 o más combinaciones de letras 
+
+    Ejemplo: far-fetched
+
+Solucion: egrep -o '[a-zA-Z]*-[a-zA-Z]*' sample_words.txt
+
 

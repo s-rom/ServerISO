@@ -1,49 +1,57 @@
-1) Extract all 3 character strings surrounded by word boundaries
+# [Recordatorio]
+# -w sirve para especificar que se tienen que buscar únicamente palabras
+# -o sirve para mostrar únicamente la parte de la linea que coincide
+# -i sirve para indicar que dan igual las mayúsculas y minúsculas
 
 
-2) Extract largest string from each line
-        starting with character: d
-        ending with character  : g
+
+1) Extra las lineas que tienen alguna palabra de 3 carácteres exactamente
 
 
-3) Extract all strings from each line
-        starting with character: d
-        followed by zero or one: o
-        ending with character  : g
+2) Extrae la cadena mas larga de cada linea que
+        empieza por: d
+        acaba en  : g
 
 
-4) Extract all strings from each line
-        starting with character: d
-        followed by zero or one of any character
-        ending with character  : g
+3) Extrae todas las cadenas de cada linea que 
+        empiezan por: d
+        a continuación 0 o más: o
+        acaba en : g
 
 
-5) Extract all strings from each line
-        starting with character: g
-        followed by atleast one: o
-        ending with character  : d
+4) Extrae todas las cadenas de cada linea que 
+        empiezan por: d
+        a continuación 0 o más de cualquier carácter
+        acaban en  : g
 
 
-6) Extract all strings from each line
-        starting with character : g
-        followed by extactly six: o
-        ending with character   : d
+
+5) Extrae todas las cadenas de cada linea que 
+        empiezan por: g
+        a continuación al menos un: o
+        acaban en  : d
 
 
-7) Extract all strings from each line
-        starting with character         : g
-        followed by min two and max four: o
-        ending with character           : d
+6) Extrae todas las cadenas de cada linea que 
+        empiezan por : g
+        a continuación exactamente 6: o
+        acaban en   : d
 
 
-8) Extract all strings from each line
-        starting with character: d
-        followed by max of two : o
-        ending with character  : g
+7) Extrae todas las cadenas de cada linea que 
+        empiezan por         : g
+        seguido de entre 2 y 4: o
+        acaban en           : d
 
 
-9) Extract all strings from each line
-        starting with character : g
-        followed by min of three: o
-        ending with character   : d
+8) Extrae todas las cadenas de cada linea que 
+        empiezan por: d
+        seguido de como mucho 2 : o
+        acaban en  : g
+
+
+9) Extrae todas las cadenas de cada linea que 
+        empiezan por : g
+        seguido de como minimo 3: o
+        acaban en   : d
 

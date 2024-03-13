@@ -10,13 +10,13 @@ Solution: grep -o 'd.*g' garbled.txt
         starting with character: d
         followed by zero or one: o
         ending with character  : g
-Solution: grep -oE 'do?g' garbled.txt
+Solution: grep -oE 'do*g' garbled.txt
 
 4) Extract all strings from each line
         starting with character: d
         followed by zero or one of any character
         ending with character  : g
-Solution: grep -oE 'd.?g' garbled.txt
+Solution: grep -oE 'd.*g' garbled.txt
 
 5) Extract all strings from each line
         starting with character: g

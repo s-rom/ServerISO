@@ -6,15 +6,16 @@ Recordatorio:
 
 1) Muestra todas las lineas que empiezan por: no
 
+egrep '^no' sample.txt
 
 2) Muestra las lineas que acaban en: it
-
+Solucion: egrep 'it$' sample.txt
 
 3) Muestra las lineas que contienen la palabra: do
-
+Solucion: egrep 'do' sample.txt
 
 4) Muestra las lineas que contienen palabras que empiezan por: do
-
+Solucion: egrep -w 'do.*' sample.txt
 
 5) Muestra las lineas que contienen palabras que acaban por: do
 
